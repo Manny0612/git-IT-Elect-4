@@ -1,0 +1,42 @@
+<html>
+   <head>
+      <title>Programming Activity 1</title>
+   </head>
+   
+   <body>
+      <h1>IT Elect 4 Activity 1</h1>
+      
+      <div ng-app = "" ng-init = "laptops = [{model:'IdeaPad 3', brand:'Lenovo', description:'New'},
+			{model:'Pavilion x360', brand:'Hp', description:'old'},
+			{model:'Inspiron 15', brand:'Dell', description:'Old'},
+			{model:'Alienware x17', brand:'Alienware', description:'New'},
+			{model:'Galaxy Book Pro', brand:'Samsung', description:'New'},
+			{model:'Tecra A30', brand:'Toshiba', description:'New'},
+			{model:'MacBook', brand:'Apple', description:'New'},
+			{model:'Lifebook', brand:'Fujitsu', description:'Old'},
+			{model:'Zenbook 14', brand:'Asus', description:'New'},
+			{model:'Aspire3', brand:'Acer', description:'New'},]"> 
+			
+         <p>Enter your Name: <input type = "text" ng-model = "name"></p>
+         <p> Your name is <span ng-bind = "name"></span>!</p>
+		 <p>Enter your Address: <input type = "text" ng-model = "addr"></p>
+         <p> Your address is <span ng-bind = "addr"></span>!</p>
+		 <p>Enter your School name: <input type = "text" ng-model = "school"></p>
+         <p> Your school is <span ng-bind = "school"></span>!</p>
+		 <p>Enter your Course: <input type = "text" ng-model = "course"></p>
+         <p> Your course is <span ng-bind = "course"></span>!</p>
+		 
+         <p>List of Laptop Brand and Model:</p>
+      
+         <ol>
+            <li ng-repeat = "lp in laptops">
+               {{ 'Brand: ' + lp.brand + ', Model: ' + lp.model + ', Description: ' + lp.description}}
+            </li>
+         </ol>
+      </div>
+      
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js">
+      </script>
+      
+   </body>
+</html>
